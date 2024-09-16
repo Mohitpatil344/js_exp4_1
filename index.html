@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirts for All</title>
+    <style>
+        .error { color: red; }
+        .receipt { border: 1px solid #000; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Customized T-Shirts for All :)</h1>
+    <form id="orderform">
+        <!-- groups the related elements in the form -->
+        <fieldset>       
+            <label>Tagline on the Shirt:</label>
+            <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required>
+            <span id="taglineError" class="error"></span>
+            <br><br>
+
+            <label>Color:</label>
+            <select name="color" required>
+                <option value="">Select a color</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+            <br><br>
+
+            <label>Size:</label>
+            <select name="size" required>
+                <option value="">Select a size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+            </select>
+            <br><br>
+
+            <label>Quantity:</label>
+            <input type="number" name="quantity" placeholder="Enter quantity" min="1" required>
+            <br><br>
+
+            <label>Delivery Date:</label>
+            <input type="date" name="delivery-date" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Details:</legend>
+            
+            <label>Recipient's Name:</label>
+            <input type="text" name="recipient-name" placeholder="Enter recipient's name" required>
+            <br><br>
+
+            <label>Address:</label>
+            <input type="text" name="address" placeholder="Enter delivery address" required>
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            <span id="emailError" class="error"></span>
+            <br><br>
+
+            <label>Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
+            <span id="phoneError" class="error"></span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Comments:</legend>
+            
+            <label>Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any additional comments or special instructions" maxlength="500"></textarea>
+            <span id="commentsError" class="error"></span>
+        </fieldset>
+
+        <br>
+        <button type="submit">Submit Order</button>
+    </form>
+
+  
+    <div id="receipt" class="receipt" ></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
